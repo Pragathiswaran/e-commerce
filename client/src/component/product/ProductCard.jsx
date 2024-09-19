@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { faStar as farstar} from '@fortawesome/free-regular-svg-icons';
 
 const ProductCard = () => {
   const checkProducts = [
@@ -52,7 +52,7 @@ const ProductCard = () => {
     <div className='flex flex-wrap mt-40'>
       {checkProducts.map((product) => (
         <div className="w-72 m-10 px-5 py-3 shadow-3xl" key={product.id}>
-          <div className="flex justify-center hover:scale-125 ease-in duration-200">
+          <div className="flex justify-center hover:scale-110 ease-in duration-200">
             <img src={product.image} alt="product" className="w-40" />
           </div>
           <div className="text-center font-semibold text-xl mt-5">
@@ -66,7 +66,7 @@ const ProductCard = () => {
           <div className="text-yellow-500 text-xl text-center mt-1">
             {/* Render the stars dynamically based on the rating */}
             {Array.from({ length: product.rating }).map((_, i) => (
-              <FontAwesomeIcon key={i} icon={faStar} />
+              <FontAwesomeIcon icon={['far', 'star']} />
             ))}
           </div>
           <div>

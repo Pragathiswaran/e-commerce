@@ -1,4 +1,6 @@
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = () => {
   return (
@@ -13,7 +15,9 @@ const Navbar = () => {
           <input type='text' placeholder='Enter the product Name'
             className='w-96 p-2 pl-5 outline-0 rounded-l'
           />
-          <button className='bg-yellow-500 py-2 rounded-r'>Search</button>
+          <button className='bg-yellow-500 py-2 px-3 rounded-r '>
+            <FontAwesomeIcon icon={faMagnifyingGlass} />
+          </button>
         </div>
         <div className='my-auto font-semibold text-2xl'>
           <span className='text-yellow-50'>Cart</span>
