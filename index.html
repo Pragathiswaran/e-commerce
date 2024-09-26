@@ -1,0 +1,33 @@
+<html>
+<body>
+
+<p id="myText">Use the HTML DOM to assign an "onselect" event to an input element.</p>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("myText").onmouseup = function() {
+  var selectedText = window.getSelection();
+  if (selectedText.toString()) {
+    myFunction(selectedText);
+  }
+};
+
+function myFunction(selectedText) {
+  // Get the range of the selected text
+  var range = selectedText.getRangeAt(0);
+  
+  // Create a span element to wrap the selected text
+  var span = document.createElement("span");
+  span.style.color = "blue";  // Apply blue color
+
+  // Place the selected text inside the span
+  range.surroundContents(span);
+
+  // Clear the selection
+  selectedText.removeAllRanges();
+}
+</script>
+
+</body>
+</html>

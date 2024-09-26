@@ -2,13 +2,15 @@ const express = require('express');
 const app = express()
 const dotenv = require('dotenv')
 const path = require('path')
+const cors = require('cors') 
 const DBconncetion = require('./config/connectDB')
 dotenv.config({path: path.join(__dirname, 'config', '.env')})
 
 const product = require('./routes/product')
 const order = require('./routes/order')
 
-app.use(express.json())
+app.use(express.json());
+app.use(cors());
 
 app.use('/api/v1', product)
 app.use('/api/v1', order)

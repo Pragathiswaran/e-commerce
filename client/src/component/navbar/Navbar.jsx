@@ -1,23 +1,22 @@
 import React from 'react'
+import SearchBar from './SearchBar';
+import { Link } from 'react-router-dom';
 
-const Navbar = () => {
+const Navbar = ({cartItems}) => {
   return (
     <>
-   <nav className='bg-indigo-900 flex justify-between p-4 px-10' >
+   <nav className='fixed top-0 w-full bg-indigo-900 flex justify-between p-4 px-10' >
         <div>
-          <a>
+          <Link to={'/'}>
             <img src='/logo.png' alt='amazon' className='w-40' />
-          </a>
+          </Link>
         </div>
         <div className='mr-16'>
-          <input type='text' placeholder='Enter the product Name'
-            className='w-96 p-2 pl-5 outline-0 rounded-l'
-          />
-          <button className='bg-yellow-500 py-2 rounded-r'>Search</button>
+          <SearchBar />
         </div>
         <div className='my-auto font-semibold text-2xl'>
           <span className='text-yellow-50'>Cart</span>
-          <span className='text-gray-900 ml-2 bg-yellow-500 text-xl font-bold px-2 rounded'>0</span>
+          <span className='text-gray-900 ml-2 bg-yellow-500 text-xl font-bold px-2 rounded'>{cartItems.length}</span>
         </div>
    </nav>
     </>
