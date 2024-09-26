@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar as farstar} from '@fortawesome/free-regular-svg-icons';
+// import { faStar as farstar} from '@fortawesome/free-regular-svg-icons';
 
 const ProductCard = () => {
   const checkProducts = [
