@@ -11,6 +11,10 @@ export default {
       },
       width:{
         '98':'600px'
+      },
+      margin:{
+        '38':'152px',
+        '30':'116.5px'
       }
     },
   },

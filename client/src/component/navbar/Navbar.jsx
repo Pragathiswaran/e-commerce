@@ -15,8 +15,10 @@ const Navbar = ({cartItems}) => {
           <SearchBar />
         </div>
         <div className='my-auto font-semibold text-2xl'>
+          <Link to={'/cart'}>
           <span className='text-yellow-50'>Cart</span>
           <span className='text-gray-900 ml-2 bg-yellow-500 text-xl font-bold px-2 rounded'>{cartItems.length}</span>
+          </Link>
         </div>
    </nav>
     </>
