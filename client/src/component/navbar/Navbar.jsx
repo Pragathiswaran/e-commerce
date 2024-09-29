@@ -1,6 +1,8 @@
 import React from 'react'
 import SearchBar from './SearchBar';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = ({cartItems}) => {
   return (
@@ -16,8 +18,8 @@ const Navbar = ({cartItems}) => {
         </div>
         <div className='my-auto font-semibold text-2xl'>
           <Link to={'/cart'}>
-          <span className='text-yellow-50'>Cart</span>
-          <span className='text-gray-900 ml-2 bg-yellow-500 text-xl font-bold px-2 rounded'>{cartItems.length}</span>
+            <span className='text-yellow-50'><FontAwesomeIcon icon={faCartShopping} /></span>
+            <span className='text-gray-900 ml-2 bg-yellow-500 text-md px-2 rounded'>{cartItems.length}</span>
           </Link>
         </div>
    </nav>
