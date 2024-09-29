@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 const ProductCard = ({product}) => {
 
   return (
-     <div className="w-72 m-10 px-5 py-3 shadow-3xl" key={product.id}>
+     <div className="w-72 m-10 px-5 py-3 shadow-3xl" key={product._id}>
           <div className="flex justify-center hover:scale-110 ease-in duration-200">
             <img src={product.images[0].image} alt="product" className="w-40 h-40" />
           </div>
@@ -17,7 +17,7 @@ const ProductCard = ({product}) => {
             </span>
             </div>
           <div className="text-center font-semibold text-xl mt-5">
-            <span>{`Rs ${product.price}`}</span>
+            <span>{`$${product.price}`}</span>
           </div>
             <div className="text-yellow-500 text-xl text-center mt-1">
               {Array.from({ length: 5 }).map((_, i) => (

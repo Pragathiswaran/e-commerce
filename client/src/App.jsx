@@ -5,6 +5,7 @@ import SingleProduct from "./component/product/SingleProduct"
 import Home from "./pages/Home"
 import Footer from "./component/footer/Footer"
 import { Routes, Route } from "react-router-dom"
+import Cart from './pages/cart'
 
 function App() {
 
@@ -18,6 +19,8 @@ function App() {
           <Route path="/" element={<Home/>} />
           <Route path="/product/:id" element={<SingleProduct cartItems={cartItems} setCartItems={setCartItems}/>} />
           <Route path="/search" element={<Home />} />
+          <Route path="/cart" element={<Cart cartItems={cartItems} setCartItems={setCartItems}/>} />
+
         </Routes>
       <Footer />
       </div>
